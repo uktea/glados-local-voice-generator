@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework Condition="'$(YmmTargetFramework)' == ''">net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetFramework Condition="'$(YmmTargetFramework)' != ''">$(YmmTargetFramework)</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>GladosLocalVoice</AssemblyName>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="YukkuriMovieMaker.Plugin">
+      <HintPath>$(YMM4DirPath)/YukkuriMovieMaker.Plugin.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="YukkuriMovieMaker.Controls">
+      <HintPath>$(YMM4DirPath)/YukkuriMovieMaker.Controls.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="YukkuriMovieMaker.Commons" Condition="Exists('$(YMM4DirPath)/YukkuriMovieMaker.Commons.dll')">
+      <HintPath>$(YMM4DirPath)/YukkuriMovieMaker.Commons.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckYmmReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(YMM4DirPath)/YukkuriMovieMaker.Plugin.dll')" Text="YMM4DirPath must point to the YMM4 application folder." />
+  </Target>
+</Project>

@@ -1,0 +1,53 @@
+{
+  "text": "Hello, test subject. The experiment begins now.",
+  "baseline": {
+    "sample_rate": 22050,
+    "duration_seconds": 3.475283446712018,
+    "rms_dbfs": -13.205647222754884,
+    "peak": 0.97357177734375,
+    "voiced_fraction": 0.8362068965517241,
+    "f0_median_hz": 155.43928795384375,
+    "f0_p10_p90_hz": [
+      132.17714670865422,
+      192.04316691661595
+    ],
+    "spectral_centroid_hz": 1316.61750010269,
+    "note": "F0は推定値。centroidはスペクトル指標でありF1/F2フォルマント測定ではありません。発話速度の比較は同一テキストで実施。"
+  },
+  "reference": {
+    "sample_rate": 44100,
+    "duration_seconds": 3.900952380952381,
+    "rms_dbfs": -21.304593816461015,
+    "peak": 0.52947998046875,
+    "voiced_fraction": 0.7605633802816901,
+    "f0_median_hz": 180.6607694957089,
+    "f0_p10_p90_hz": [
+      146.1178640400799,
+      206.99520554226518
+    ],
+    "spectral_centroid_hz": 1882.1353179171208,
+    "note": "F0は推定値。centroidはスペクトル指標でありF1/F2フォルマント測定ではありません。発話速度の比較は同一テキストで実施。"
+  },
+  "candidate": {
+    "sample_rate": 22050,
+    "duration_seconds": 3.744988662131519,
+    "rms_dbfs": -21.269568639020996,
+    "peak": 0.52825927734375,
+    "voiced_fraction": 0.897196261682243,
+    "f0_median_hz": 178.33629659106467,
+    "f0_p10_p90_hz": [
+      141.4030729024906,
+      225.178942064675
+    ],
+    "spectral_centroid_hz": 1320.278938104017,
+    "note": "F0は推定値。centroidはスペクトル指標でありF1/F2フォルマント測定ではありません。発話速度の比較は同一テキストで実施。"
+  },
+  "candidate_parameters": {
+    "speed": 0.8908807663690477,
+    "pitch": 2.6,
+    "formant": 0,
+    "intonation": 1,
+    "gain": -8.1
+  },
+  "limitations": "One utterance only; estimated F0, not perceptual similarity. No measured F1/F2 or phoneme alignment. Not a universal preset."
+}
